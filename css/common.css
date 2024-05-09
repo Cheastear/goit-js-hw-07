@@ -12,3 +12,12 @@ body {
   color: #212121;
   line-height: 1.5;
 }
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+.task2Img {
+  width: calc(33.3% - 10px);
+  margin: 5px;
+}
