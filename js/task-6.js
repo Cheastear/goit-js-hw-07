@@ -12,7 +12,7 @@ function createBoxes(amount) {
     var size = 30;
 
     for (let i = 0; i < amount; i++) {
-      var div = document.createElement('div');
+      const div = document.createElement('div');
 
       div.style.width = size + 'px';
       div.style.height = size + 'px';
@@ -31,7 +31,7 @@ function destroyBoxes() {
   document.querySelector('#boxes').innerHTML = '';
 }
 
-var btns = document.querySelectorAll('#controls button');
+const btns = document.querySelectorAll('#controls button');
 
 btns[0].addEventListener('click', e => createBoxes(document.querySelector('#controls input').value));
 btns[1].addEventListener('click', e => destroyBoxes());

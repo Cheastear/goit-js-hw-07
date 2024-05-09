@@ -1,7 +1,7 @@
 document.querySelector('.login-form').addEventListener('submit', e => {
     e.preventDefault()
 
-    var inputs = e.currentTarget.querySelectorAll('input');
+    const inputs = e.currentTarget.querySelectorAll('input');
 
     var isEmpty = false;
 

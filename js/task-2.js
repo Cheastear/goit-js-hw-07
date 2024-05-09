@@ -25,10 +25,10 @@ const images = [
   }
 ];
 
-var gallery = document.querySelector('.gallery');
+const gallery = document.querySelector('.gallery');
 
 images.forEach(element => {
-  var img = document.createElement('img');
+  const img = document.createElement('img');
   img.classList.add('task2Img');
   img.src = element.url;
   img.alt = element.alt;
