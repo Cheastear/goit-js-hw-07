@@ -27,10 +27,10 @@ const images = [
 
 const gallery = document.querySelector('.gallery');
 
+let html = '';
+
 images.forEach(element => {
-  const img = document.createElement('img');
-  img.classList.add('task2Img');
-  img.src = element.url;
-  img.alt = element.alt;
-  gallery.append(img);
+  html += `<li><img class="task2Img" src="${element.url}" alt="${element.alt}"></li>`;
 });
+
+gallery.insertAdjacentHTML('beforeend', html);
