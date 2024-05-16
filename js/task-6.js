@@ -5,22 +5,18 @@ function getRandomHexColor() {
 }
 
 function createBoxes(amount) {
-  if (0 < amount && amount < 100) {
+  if (0 < amount && amount <= 100) {
 
     destroyBoxes();
 
     var size = 30;
 
     for (let i = 0; i < amount; i++) {
-      const div = document.createElement('div');
-
-      div.style.width = size + 'px';
-      div.style.height = size + 'px';
+      const div = `<div style="width: ${size}px; height: ${size}px; background-color: ${getRandomHexColor()}"></div>`;
+      
       size += 10;
 
-      div.style.backgroundColor = getRandomHexColor();
-
-      document.querySelector('#boxes').append(div);
+      document.querySelector('#boxes').insertAdjacentHTML('beforeend', div);
     }
 
     document.querySelector('#controls input').value = '';
