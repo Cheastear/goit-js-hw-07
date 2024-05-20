@@ -13,7 +13,7 @@ function createBoxes(amount) {
     destroyBoxes();
 
     const size = 30;
-    const innerHTML = '';
+    let innerHTML = '';
     for (let i = 0; i < amount; i++) {
       innerHTML += `<div style="width: ${((i + 1) * 10) + size}px; height: ${((i + 1) * 10) + size}px; background-color: ${getRandomHexColor()}"></div>`;
     }
